@@ -1,5 +1,6 @@
 import React from "react";
 import "./App.css";
+import Todo from "./Todo";
 
 function App() {
   const todos = ["Clean Bathroom", "Learn React"];
@@ -7,7 +8,7 @@ function App() {
     <div>
       <h1>Martin To Do</h1>
       {todos.map((todo) => (
-        <p>{todo}</p>
+        <Todo todo={todo} />
       ))}
     </div>
   );
