@@ -3,6 +3,7 @@
   color: antiquewhite;
   margin: 5px;
   padding: 10px;
+  cursor: pointer;
 }
 
 .todo:hover {
