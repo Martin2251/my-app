@@ -4,8 +4,23 @@
   margin: 5px;
   padding: 10px;
   cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .todo:hover {
   background-color: #98D9C2;
+}
+
+.remove{
+  width: 25px;
+  height: 25px;
+  background-color: #4A1942;
+  cursor: pointer;
+  border: none;
+}
+.remove:hover{
+  background-color: #391463;
+
 }

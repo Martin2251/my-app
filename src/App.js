@@ -9,6 +9,11 @@ const initialState = ["Clean Bathroom", "Learn React", "Code"];
 function App() {
   const [todos, setTodos] = useState(initialState);
   const [inputValue, setInputValue] = useState("");
+
+  function removeTodo(todo) {
+    setTodos(todos.filter((td) => td !== todo));
+  }
+
   return (
     <div>
       <h1>Martin To Do</h1>
@@ -31,7 +36,7 @@ function App() {
         </button>
       </div>
       {todos.map((todo) => (
-        <Todo todo={todo} />
+        <Todo todo={todo} removeTodo={removeTodo} />
       ))}
     </div>
   );
