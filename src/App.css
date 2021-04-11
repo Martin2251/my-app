@@ -2,11 +2,18 @@
   background-color: #F19A3E;
   color: antiquewhite;
   margin: 5px;
-  padding: 10px;
+  padding: 1rem 0;
   cursor: pointer;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  border: 1px;
+  box-shadow:  1px 0 12px rgba(0, 0, 0, 0.13);
+  width: 100%;
+  border-radius: 5px;
+  text-transform: capitalize;
+  font-weight: 700;
+  font-size: 18px;
 }
 
 .todo:hover {
@@ -19,6 +26,7 @@
   background-color: #4A1942;
   cursor: pointer;
   border: none;
+  border-radius: 5px;
 }
 .remove:hover{
   background-color: #391463;
