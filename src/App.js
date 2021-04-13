@@ -2,6 +2,7 @@ import React from "react";
 import "./App.css";
 import Todo from "./Todo";
 import { useState } from "react";
+import Card from "./Card";
 
 //initial state
 const initialState = ["Clean Bathroom", "Learn React", "Code"];
@@ -38,6 +39,30 @@ function App() {
       {todos.map((todo) => (
         <Todo todo={todo} removeTodo={removeTodo} />
       ))}
+      <Card
+        firstName="Martin"
+        lastName="Lowe"
+        language="Javascript"
+        framework="react"
+      ></Card>
+      <Card
+        firstName="Bogdan"
+        lastName="Dae"
+        language="the oracle"
+        framework="vue"
+      ></Card>
+      <Card
+        firstName="Sam"
+        lastName="Eve"
+        language="Ruby"
+        framework="Ember"
+      ></Card>
+      <Card
+        firstName="Dave"
+        lastName="ret"
+        language="php"
+        framework="django"
+      ></Card>
     </div>
   );
 }
