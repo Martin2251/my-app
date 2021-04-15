@@ -48,9 +48,14 @@ function App() {
           Add Todo
         </button>
       </div>
-      {todos.map((todo) => (
-        <Todo todo={todo} removeTodo={removeTodo} />
-      ))}
+      <div className="todo-container">
+        {todos.map((todo) => (
+          <Todo todo={todo} removeTodo={removeTodo} />
+        ))}
+      </div>
+      <p>
+        You have <strong>{todos.length}</strong> tasks in progress
+      </p>
     </div>
   );
 }

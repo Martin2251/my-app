@@ -1,3 +1,7 @@
+body{
+  font-family: 'Roboto Mono', monospace;
+}
+
 .todo {
   background-color: #F19A3E;
   color: antiquewhite;
