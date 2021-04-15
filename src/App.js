@@ -28,16 +28,19 @@ function App() {
   }, [todos]);
 
   return (
-    <div>
-      <h1>Martin To Do</h1>
+    <div id="app">
+      <h1 className="todos-title">Martin To Do</h1>
+      <div className="input-row"></div>
       <div>
         <input
+          className="add-todo-input"
           value={inputValue}
           onChange={(event) => {
             setInputValue(event.target.value);
           }}
         ></input>
         <button
+          className="submit-button"
           onClick={(e) => {
             //add todo
             setTodos([...todos, inputValue]);
