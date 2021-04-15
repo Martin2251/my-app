@@ -4,10 +4,19 @@ import Todo from "./Todo";
 import { useState, useEffect } from "react";
 
 //initial state
-const initialState = ["Clean Bathroom", "Learn React", "Code"];
+//const initialState = ["Clean Bathroom", "Learn React", "Code"];
+
+function getTodoFromLocalStorage() {
+  let todosString = localStorage.getItem("todos");
+  if (todosString.length > 0) {
+    return todosString.split(",");
+  } else {
+    return [];
+  }
+}
 
 function App() {
-  const [todos, setTodos] = useState(initialState);
+  const [todos, setTodos] = useState(getTodoFromLocalStorage());
   const [inputValue, setInputValue] = useState("");
 
   function removeTodo(todo) {
