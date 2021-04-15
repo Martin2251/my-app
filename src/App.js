@@ -8,7 +8,7 @@ import { useState, useEffect } from "react";
 
 function getTodoFromLocalStorage() {
   let todosString = localStorage.getItem("todos");
-  if (todosString.length > 0) {
+  if (todosString && todosString.length > 0) {
     return todosString.split(",");
   } else {
     return [];
@@ -42,10 +42,12 @@ function App() {
         <button
           className="submit-button"
           onClick={(e) => {
-            //add todo
-            setTodos([...todos, inputValue]);
-            //clean up
-            setInputValue("");
+            if (inputValue && inputValue.length > 0) {
+              //add todo
+              setTodos([...todos, inputValue]);
+              //clean up
+              setInputValue("");
+            }
           }}
         >
           Add Todo
