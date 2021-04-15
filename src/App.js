@@ -1,7 +1,7 @@
 import React from "react";
 import "./App.css";
 import Todo from "./Todo";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 //initial state
 const initialState = ["Clean Bathroom", "Learn React", "Code"];
@@ -13,6 +13,10 @@ function App() {
   function removeTodo(todo) {
     setTodos(todos.filter((td) => td !== todo));
   }
+
+  useEffect(() => {
+    localStorage.setItem("todos", todos);
+  }, [todos]);
 
   return (
     <div>
